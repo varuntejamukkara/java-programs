@@ -1,27 +1,31 @@
-package jpatterns;
+package ijPatterns;
 
 import java.util.Scanner;
 
-public class Pattern4 {
-	public static void main(String[] args) 
+public class Pattern4 
+{
+	public static void main(String[]args)
 	{
-		Scanner sc=new Scanner(System.in);
-		  System.out.println("enter the number");
-			int num=sc.nextInt();
-			//char A='A';
-			int a=1;
-			for(int i=1;i<=num;i++)
+	Scanner sc=new Scanner(System.in);
+	  System.out.println("enter the number");
+		int num=sc.nextInt();
+		int temp=1;
+		char a='A';
+		for(int i=1;i<=num;i++)
+		{
+			for(int j=1;j<=i;j++)
 			{
-				for(int j=1;j<=i;j++)
-					
+				if((i+j)%2==0)
 				{
-					System.out.print(a+" ");
-					a++;
-					
+				System.out.print(a+++" ");
 				}
-				System.out.println();
-			}
-
+				else
+				{
+					System.out.print(temp+++" ");
+				}
+			}	
+			System.out.println();
+		}
 	}
 
 }
